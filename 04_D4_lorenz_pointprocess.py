@@ -76,7 +76,10 @@ config_D4={
     'pca_comp':torch.transpose(torch.tensor(principalComponents_XDsign, dtype=torch.double),0,1)
 }
 D4= D4RegMNV(config_D4)
-ELBO, posterior,posterior_smooth, corr_score_tr, mae_score_tr = D4.variational_I(XDsign_train,X_train)
+if config_D4['supervised']:
+  ELBO, posterior,posterior_smooth, corr_score_tr, mae_score_tr = D4.variational_I(XDsign_train,X_train)
+  else:
+     ELBO, posterior,posterior_smooth, corr_score_tr, mae_score_tr = D4.variational_em(XDsign_train,X_train)
 
 
 
