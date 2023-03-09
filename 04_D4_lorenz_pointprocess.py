@@ -57,7 +57,7 @@ XDsign = calDesignMatrix_V2(Spikes,len_history_design+1).squeeze()
 
 principalComponents_XDsign = pca.fit_transform(Spikes_train)
 config_D4={
-    'supervised':False,
+    'supervised':True,
     'state_process_type': 'random_walk',# Lorenz, random_walk
     'data_dim':InputDim,
     'history_length':len_history_design,
@@ -76,7 +76,7 @@ config_D4={
     'pca_comp':torch.transpose(torch.tensor(principalComponents_XDsign, dtype=torch.double),0,1)
 }
 D4= D4RegMNV(config_D4)
-ELBO, posterior,posterior_smooth, corr_score_tr, mae_score_tr = D4.variational_em(XDsign_train,X_train)
+ELBO, posterior,posterior_smooth, corr_score_tr, mae_score_tr = D4.variational_I(XDsign_train,X_train)
 
 
 
