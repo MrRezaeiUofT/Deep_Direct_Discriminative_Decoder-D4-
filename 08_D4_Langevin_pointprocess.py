@@ -112,9 +112,10 @@ posterior_test,posterior_smooth_test, cc_te, mae_te = D4.get_posterior(XDsign_te
 f, axes = plt.subplots(3, 1, sharex=True, sharey=False)
 axes[0].plot((np.array(ELBO)), label='Q')
 axes[0].set_title('Q')
-axes[1].plot((np.array(cc_tr)), label='CC-Tr')
+axes[1].plot((np.array(cc_te)), label='CC-Tr')
 axes[1].set_title('CC-Tr')
-axes[2].plot((np.array(mae_tr)) ,label='MAE-Tr')
+axes[2].plot((np.array(mae_te)) ,label='MAE-Tr')
+
 axes[2].set_title('MAE-Tr')
 
 
