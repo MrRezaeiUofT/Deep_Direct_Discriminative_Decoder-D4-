@@ -6,4 +6,4 @@ To facilitate the deployment of experiments, use this [Colab notebook](Run_D4_in
 
 See the details in [ArXiv, 2022]( https://arxiv.org/pdf/2205.10947.pdf). Cite this paper [DOI](https://doi.org/10.1162/neco_a_01491).
 
-[An example of the Lorenz attractor modeling.](Lorenz_attractor.png)
+![An example of the Lorenz attractor modeling.](Lorenz_attractor.png)
