@@ -70,8 +70,7 @@ config_D4={
 }
 
 D4= D4RegMNV(config_D4)
-ELBO, posterior,posterior_smooth,  = D4.variational_I(XDsign,X)
-
+ELBO, posterior,posterior_smooth, _, _ = D4.variational_I(XDsign,X)
 
 plt.figure()
 plt.plot(ELBO)
