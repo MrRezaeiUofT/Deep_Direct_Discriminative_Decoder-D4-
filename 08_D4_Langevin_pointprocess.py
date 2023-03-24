@@ -88,6 +88,7 @@ config_D4={
     'kl_lambda_prior':0.0,
     'pca_comp':torch.transpose(torch.tensor(principalComponents_XDsign, dtype=torch.double),0,1)
 }
+D4= D4RegMNV(config_D4)
 if config_D4['supervised']:
   ELBO, posterior,posterior_smooth, corr_score_tr, mae_score_tr = D4.variational_I(XDsign_train,X_train)
 else:
