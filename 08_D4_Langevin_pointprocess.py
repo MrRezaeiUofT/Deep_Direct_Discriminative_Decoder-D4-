@@ -70,7 +70,7 @@ XDsign = calDesignMatrix_V2(Spikes,len_history_design+1).squeeze()
 
 principalComponents_XDsign = pca.fit_transform(Spikes_train)
 config_D4={
-    'supervised':False,
+    'supervised':True,
     'state_process_type': 'random_walk',# Lorenz, random_walk
     'data_dim':InputDim,
     'history_length':len_history_design,
