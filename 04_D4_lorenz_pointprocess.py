@@ -70,7 +70,7 @@ config_D4={
     'batch_size': 400,
     'epochs':100,
     'visualization_step':10,
-    'EM_itr':10,
+    'EM_itr':100,
     'kl_lambda':.1,
     'kl_lambda_prior':0.0,
     'pca_comp':torch.transpose(torch.tensor(principalComponents_XDsign, dtype=torch.double),0,1)

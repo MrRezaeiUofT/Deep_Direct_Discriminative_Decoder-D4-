@@ -64,7 +64,7 @@ config_D4={
     'epochs':3,
     'visualization_step':8,
     'EM_itr':100,
-    'kl_lambda':1,
+    'kl_lambda':.1,
     'kl_lambda_prior': .1,
     'pca_comp':torch.transpose(torch.tensor(principalComponents_XDsign, dtype=torch.double),0,1)
 }
